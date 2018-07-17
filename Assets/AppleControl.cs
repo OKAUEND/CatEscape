@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowController : MonoBehaviour {
-
+public class AppleControl : MonoBehaviour {
     GameObject Player;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         this.Player = GameObject.Find("player");
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         transform.Translate(0, -0.1f, 0);
 
-        if(transform.position.y < -5.0f) 
-            {
+        if (transform.position.y < -5.0f)
+        {
             Destroy(gameObject);
-            }
+        }
 
         Vector2 p1 = transform.position;
         Vector2 p2 = this.Player.transform.position;
@@ -27,12 +28,12 @@ public class ArrowController : MonoBehaviour {
         float r1 = 0.5f;
         float r2 = 0.8f;
 
-        if(d < r1 + r2)
+        if (d < r1 + r2)
         {
             Destroy(gameObject);
             GameObject Director = GameObject.Find("GameDirector");
-            Director.GetComponent<GameDirector>().DecreaseHP();
+            Director.GetComponent<GameDirector>().HealHP();
         }
-           
-	}
+
+    }
 }

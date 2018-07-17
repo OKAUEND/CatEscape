@@ -590,6 +590,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 1840179402847070, guid: 3b44f6fff030c94499013173f682d0b3,
     type: 2}
+  RedarrowPrefab: {fileID: 1512036592248032, guid: 3c5f7a594ebf3c2418cb69600753229b,
+    type: 2}
+  Apple: {fileID: 1212463246495742, guid: 7c0f3c99b3ab602429fe88166df186a3, type: 2}
 --- !u!1 &1606380984
 GameObject:
   m_ObjectHideFlags: 0
